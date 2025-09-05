@@ -1,0 +1,93 @@
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  height: 80vh;
+  padding: 1rem 7rem;
+  margin: 1rem;
+  border-radius: 1rem;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.header :is(img) {
+  z-index: -2;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  animation: header-bg 2s ease-in-out 1;
+  filter: brightness(50%);
+}
+@keyframes header-bg {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background-color: white;
+  aspect-ratio: 3/1;
+  width: 100%;
+  transform: translateY(-500px);
+  animation: afterrr 2s ease-in-out 1;
+}
+@keyframes afterrr {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  transform: translateY(500px);
+  background-color: white;
+  aspect-ratio: 3/1;
+  width: 100%;
+  animation: beforeee 2s ease-in-out 1;
+}
+
+@keyframes beforeee {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(500px);
+  }
+}
+
+.header :where(.heading1) {
+  color: white;
+  font-size: 80px;
+}
+.header :where(p) {
+  color: white;
+  width: 300px;
+}

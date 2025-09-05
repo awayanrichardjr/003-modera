@@ -6,7 +6,7 @@
 
   padding: 1rem 2rem;
 
-  animation: navigationnn 2s ease 1;
+  animation: navigationnn 1.5s ease-in-out 1;
 }
 @keyframes navigationnn {
   from {
