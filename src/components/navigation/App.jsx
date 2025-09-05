@@ -1,4 +1,4 @@
-import "./nav.css";
+import "./style.css";
 
 function Navigation() {
   return (
@@ -12,6 +12,30 @@ function Navigation() {
             </a>
           </li>
         </ul>
+        <div className="container">
+          <ul className="links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+          </ul>
+          <ul className="contact">
+            <li>
+              <a href="#">
+                <p>Contact now</p>
+                <span className="material-symbols-rounded">trending_flat</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );
