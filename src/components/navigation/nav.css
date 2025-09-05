@@ -1,0 +1,10 @@
+.navigation {
+}
+
+.navigation :where(.logo) a {
+  display: flex;
+  align-items: center;
+  span {
+    font-variation-settings: "FILL" 1;
+  }
+}
